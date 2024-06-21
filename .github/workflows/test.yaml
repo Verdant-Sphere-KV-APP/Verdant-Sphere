@@ -3,7 +3,8 @@ name: Test Workflow
 on: workflow_call
 
 jobs:
-  name: Test the Application
+  test:
+    name: Test the Application
     runs-on: ubuntu-latest
     services:
       mysql:
