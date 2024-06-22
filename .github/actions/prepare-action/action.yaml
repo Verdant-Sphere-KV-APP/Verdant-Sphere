@@ -3,7 +3,7 @@ description: "Prepare Composite Action"
 inputs:
   version:
     description: "PHP Version"
-   required: true
+   required: 'true'
 
 runs:
   using: Composite
