@@ -15,10 +15,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+      - name: Prepare Action
+        uses: ./.github/actions/prepare-action
         with:
-          php-version: ${{inputs.version}}
+          version: ${{ inputs.version }}
 
       - name: Install dependencies
         run: |
