@@ -4,13 +4,13 @@ name: QA Workflow
 on: workflow_dispatch
 
 jobs:
-  build-version-8.3:
+  build-version-83:
     name: "Build"
     uses: ./.github/workflows/build.yaml
     with:
       version: "8.3"
 
-  build-version-8.2:
+  build-version-82:
     name: "Build"
     uses: ./.github/workflows/build.yaml
     with:
