@@ -21,3 +21,10 @@ jobs:
     uses: ./.github/workflows/test.yaml
     with: 
       version: "8.2"
+
+  scan:
+    name: "CI Code Scan"
+    needs: [test]
+    uses: ./.github/workflows/sonar-scan.yaml
+    secrets:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
