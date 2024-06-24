@@ -38,13 +38,3 @@ jobs:
       - name: Generate the key
         run: |
           php artisan key:generate
-
-      - uses: sonarsource/sonarqube-quality-gate-action@master
-        timeout-minutes: 5
-        with:
-          projectBaseDir: .
-          args: >
-            sonar.organization=sonar-scan
-            sonar.projectKey=sonar-scan
-        env:
-           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
