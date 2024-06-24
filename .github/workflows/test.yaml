@@ -54,12 +54,9 @@ jobs:
       - name: Migrate the Database
         run: |
           php artisan migrate
-          php artisan config:cache
-          php artisan config:clear
-
 
       - name: Run Unit Testing
         run: |
           php artisan test
-          vendor/bin/phpunit
+
 
